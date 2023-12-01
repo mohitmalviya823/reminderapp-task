@@ -1,0 +1,39 @@
+<!-- delete-reminder.handlebars or your template file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Reminder</title>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <h2>Delete Reminder</h2>
+        <ul class="mt-5">
+          {{#each reminders}}
+            <div class="bd-highlight">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h3 class="text-capitalize">{{reminder}}</h3>
+                  <div class="fs-6">{{description}}</div>
+                </div>
+                <form method="POST" action="/delete-reminder">
+                  <input type="hidden" name="id" value="{{id}}" />
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+              <div class="d-flex justify-content-end" style="font-size:13px">{{displayDate}}</div>
+            </div>
+            <hr />
+          {{/each}}
+        </ul>
+      </div>
+      <!-- Add more content if needed -->
+    </div>
+  </div>
+
+</body>
+</html>

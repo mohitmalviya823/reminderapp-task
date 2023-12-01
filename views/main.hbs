@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-light px-5">
+  <div class="navbar-brand">
+    <h2>Remindoo</h2>
+    <p>{{username}}</p>
+  </div>
+  <div class="ml-auto">
+    <form method="POST" action="/logout">
+      <button class="btn btn-danger" type="submit">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <h2>Welcome to the Reminder Application</h2>
+     <p>Today is {{currentDate}}</p>
+      <div class="d-flex justify-content-between mb-4">
+        <a href="/set-reminder" class="btn btn-primary">Set Reminder</a>
+        <a href="/modify-reminder" class="btn btn-warning">Modify Reminder</a>
+        <a href="/disable-reminder" class="btn btn-secondary">Disable Reminder</a>
+        <a href="/delete-reminder" class="btn btn-danger">Delete Reminder</a>
+        <a href="/enable-reminder" class="btn btn-success">Enable Reminder</a>
+        <a href="/reminders" class="btn btn-info">View your Reminders</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>
